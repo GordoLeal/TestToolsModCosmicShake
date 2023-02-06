@@ -16,3 +16,4 @@ Hold Right Ctrl or M to display buttons
 
 Installation:
  go to the game folder -> CosmicShake/Content/Paks  -> create a folder called ~Mods and place the .pak file inside.
+![image](https://user-images.githubusercontent.com/25584400/216940068-d3944485-aa80-43b8-a35d-7cd645a8f338.png)
