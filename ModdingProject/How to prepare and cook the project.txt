@@ -1,0 +1,53 @@
+- Unreal Editor:
+You need to download the same unreal editor version used by the developers to compile the game, for cosmic shake is unreal editor 4.27.2;
+You can check it by going into the game .exe, right clicking, "properties", on the "details" tab you should see something like UE4+Release+**unrealVersion** etc...
+
+- Preparing the UnrealPak
+Inside the folder you downloaded, there should be a .bat called unrealpak-with-compression. Copy it.
+Go where your unreal engine is installed and find the folder "\Engine\Binaries\Win64"
+UnrealPak.exe should be there.
+paste the .bat there, and copy the .bat you just placed, so we can make a shortcut for it later.
+Go back to the folder you downloaded and right click -> create shortcut. it should create a shortcut for the .bat.
+this is the file we gonna use for paking the project.
+
+- TestToolsMod project.
+Test Tools Mod is a speedrun practice and glitch hunting assistant i made for Spongebob:cosmic shake community.
+i am providing the unreal project so you can have something to play or maybe learn something.
+obs: I have low learning of Unreal, so the project don't have the best blueprint programing practices, but it may give you
+knowledge to understand how to do something small like inserting your own blueprint actor into the game.
+
+- How to cook the project
+Top-Left > File > Cook content for windows.
+After is done, go into the project file > Saved > WindowsNoEditor > TestToolsMod
+Copy the Content Folder.
+Inside the folder you downloaded there is a folder called "TestToolsMod_P".
+Paste the content folder inside the "CosmicShake" folder.
+Your folder structure should now be "TestToolsMod_P\CosmicShake\Content\..."
+Now the mod folder is done, if you are only changing models/sounds/textures... this should be enough and you can just pak it.
+but test tools mod are overwriting blueprints to run their own and for this we need to do some extra steps.
+inside the folder you downloaded there is a folder called HexEditedFiles, open it and copy the files.
+Now go to "TestToolsMod_P\CosmicShake\Content\CS\Core\Game" and paste it, overwriting a few files.
+now we can pak the mod for it to work with the game.
+
+- Paking the project.
+recap: if you did everthing right with "Preparing UnrealPak" step you should have the folder "TestToolsMod_P" and the "unrealpak-with-compression" shortcut pointing to the .bat file that is inside the UE_4.27\...\Win64 folder.
+Now just holde left click and Move the TestToolsMod_P folder into the .bat file and it should start the paking process.
+if you did everthing right, a .pak file will be created and you can rename it to anything like BigAssAndBalls_P.pak
+BUT REMEMBER: "_P.pak" at the end is necessary so the engine can detect it as a patch, idk how exactly it works but is necessary.
+
+-Installing the mod
+Go into the game folder, find the "content" folder and create a ~Mods folder, place the .pak file inside.
+for cosmic shake is: "\CosmicShake\Content\Paks"
+start the game and have fun with your mod.
+
+
+-Tips:
+If you are changing models,sounds and/or textures make sure to follow the same path that the game uses.
+example: you want to change a texture that is inside "CosmicShake\Content\audio\burp", the folder path in the unreal project needs to be "Content\audio\burp" and after the cooking you add the CosmicShake folder.
+You can use FModel (https://fmodel.app/) to check\extract the game files and the path structure.
+
+You can ask for help on the speedrun discord or the modding discord.
+Speedrun Discord: https://discord.gg/7K93fAwx5r
+Modding Discord: https://discord.gg/qWCtKfu
+
+This project is made by Gordo#0865
